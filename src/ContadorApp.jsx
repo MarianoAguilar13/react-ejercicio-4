@@ -21,7 +21,7 @@ function ContadorApp({ value }) {
 
 //tipando la props.name que va a ser un numero
 ContadorApp.propTypes = {
-  name: PropTypes.number,
+  value: PropTypes.number,
 };
 
 export default ContadorApp;
