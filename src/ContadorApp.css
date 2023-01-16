@@ -1,0 +1,10 @@
+.boton-counter-app {
+  border: 5px solid snow;
+  border-radius: 10px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.container-counter-app {
+  color: blueviolet;
+}
