@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function ContadorApp({ value }) {
   const imprimirValor = (e) => {
-    e.prevendefault;
+    e.preventDefault();
     console.log("el valor es: ", value);
   };
 
