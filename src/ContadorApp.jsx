@@ -3,18 +3,33 @@ import "./ContadorApp.css";
 import PropTypes from "prop-types";
 
 function ContadorApp({ value }) {
-  const imprimirValor = (e) => {
-    e.preventDefault();
-    console.log("el valor es: ", value);
+  const [valorContador, setValorContador] = useState(value);
+
+  const sumar = () => {
+    setValorContador(valorContador + 1);
+  };
+  const restar = () => {
+    setValorContador(valorContador - 1);
+  };
+  const reset = () => {
+    setValorContador(value);
   };
 
   return (
     <div className="container-counter-app">
       <h1 className="counter-app">CounterApp</h1>
-      <h2>{value}</h2>
-      <button onClick={imprimirValor} className="boton-counter-app">
-        Imprimir
-      </button>
+      <h3 className="counter-app-value">{valorContador}</h3>
+      <div className="container-buttons">
+        <button onClick={sumar} className="boton-sumar">
+          Sumar 1
+        </button>
+        <button onClick={restar} className="boton-restar">
+          Restar 1
+        </button>
+        <button onClick={reset} className="boton-reset">
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

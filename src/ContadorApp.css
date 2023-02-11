@@ -1,10 +1,54 @@
-.boton-counter-app {
+.boton-sumar {
   border: 5px solid snow;
   border-radius: 10px;
-  background-color: blueviolet;
+  background-color: red;
   color: white;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.boton-restar {
+  border: 5px solid snow;
+  border-radius: 10px;
+  background-color: skyblue;
+  color: black;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.boton-reset {
+  border: 5px solid snow;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  color: black;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
 }
 
 .container-counter-app {
   color: blueviolet;
+}
+
+.container-buttons {
+  display: flex;
+  padding: 0 auto;
+  flex-direction: column;
+  height: 300px;
+  width: 600px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-counter-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-app-value {
+  margin-top: 0;
 }
