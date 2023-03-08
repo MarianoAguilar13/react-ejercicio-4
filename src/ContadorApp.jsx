@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ContadorApp.css";
 import PropTypes from "prop-types";
+import AlertComponent from "./AlertComponent";
 
 function ContadorApp({ value }) {
   const [valorContador, setValorContador] = useState(value);
+
+  useEffect(() => {
+    console.log(`Valor inicial: ${value} `);
+  }, []);
 
   const sumar = () => {
     setValorContador(valorContador + 1);
@@ -14,6 +19,12 @@ function ContadorApp({ value }) {
   const reset = () => {
     setValorContador(value);
   };
+
+  useEffect(() => {
+    if (valorContador) {
+      document.title = `Actualmente el valor del contador es: ${valorContador}`;
+    }
+  }, [valorContador]);
 
   return (
     <div className="container-counter-app">
@@ -30,6 +41,7 @@ function ContadorApp({ value }) {
           Reset
         </button>
       </div>
+      <AlertComponent value={valorContador}></AlertComponent>
     </div>
   );
 }
